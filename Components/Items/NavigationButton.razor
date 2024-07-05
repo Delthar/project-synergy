@@ -1,0 +1,12 @@
+﻿@inject NavigationManager NavigationManager
+@inherits Button
+
+<Button Content="@Content" OnClick="@(() => Navigate(@Route ?? ""))"></Button>
+
+@code 
+{
+    [Parameter]
+    public String? Route { get; set; }
+
+    private void Navigate(String pageName) => NavigationManager.NavigateTo(pageName);
+}
