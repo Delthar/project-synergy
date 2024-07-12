@@ -12,6 +12,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
 	  <None Include="../nginx/Dockerfile" />
+	  <None Include="wwwroot\Synergy.css" />
   </ItemGroup>
   
 </Project>

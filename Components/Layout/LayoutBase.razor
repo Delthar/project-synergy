@@ -1,0 +1,17 @@
+﻿@inherits LayoutComponentBase
+
+<div class="container-fluid overflow-hidden vh-100 vw-100">
+    <div class="row bg-primary-gradient-right">
+        <div class="col text-end text-white">Synergy</div>
+    </div>
+    <div class="row">
+        <div class="col vh-100 bg-primary-gradient-bottom" style="max-width: 10vh;">
+            <NavigationBar />
+        </div>
+        <div class="col bg-secondary">
+            <div class="row">
+                @Body
+            </div>
+        </div>
+    </div>
+</div>
