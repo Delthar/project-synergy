@@ -1,9 +1,11 @@
 using Synergy.Components;
+using Synergy.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents().AddInteractiveServerComponents();
+builder.Services.AddSingleton<ServerService>();
 
 var app = builder.Build();
 

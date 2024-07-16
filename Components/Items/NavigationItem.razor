@@ -1,0 +1,23 @@
+﻿<div class="card mt-2 mb-2 border-0 bg-transparent">
+    @if (ServerID != null)
+    {
+        <NavLink href="@($"Server/{ServerID}")">
+            <img class="card-img rounded-circle" src="@Image" />
+        </NavLink>
+    }
+    else
+    {
+        <NavLink href="">
+            <img class="card-img rounded-circle" src="@Image" />
+        </NavLink>
+    }
+</div>
+
+@code
+{
+    [Parameter]
+    public Int32? ServerID { get; set; }
+
+    [Parameter]
+    public String? Image { get; set; }
+}

@@ -1,0 +1,29 @@
+﻿.overflow-auto {
+    overflow: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+    .overflow-auto::-webkit-scrollbar {
+        display: none;
+    }
+
+.bg-primary {
+    background-color: #870038 !important;
+}
+
+.bg-primary-gradient-right {
+    background: linear-gradient(to right, #870038, #520022);
+}
+
+.bg-primary-gradient-bottom {
+    background: linear-gradient(to bottom, #870038, #520022);
+}
+
+.bg-secondary {
+    background-color: #011627 !important;
+}
+
+.bg-tertiary {
+    background-color: #EBEBEA !important;
+}
