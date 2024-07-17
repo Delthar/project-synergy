@@ -13,6 +13,7 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
     <PackageReference Include="Npgsql" Version="8.0.3" />
 	  <None Include="../nginx/Dockerfile" />
+	  <None Include="wwwroot\Synergy.css" />
   </ItemGroup>
   
 </Project>

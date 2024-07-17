@@ -1,0 +1,33 @@
+﻿@inject ServerService ServerService
+
+<div class="border-bottom">
+    <NavigationItem Image="/Home.png" />   
+    <NavigationItem Image="/Search.png" />
+    <NavigationItem Image="/Add.png" />
+</div>
+<div class="overflow-auto vh-100">
+    @if (serverList != null)
+    {
+        @foreach (Server server in serverList)
+        {
+            <NavigationItem ServerID="server.ServerID" Image="/testimage.jpg" />
+        }
+    }
+</div>
+
+@code 
+{
+    private List<Server> serverList;
+
+    public NavigationBar()
+    {
+        serverList = new List<Server>();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        serverList = ServerService.GetServerList();
+
+        await base.OnInitializedAsync(); 
+    }
+}

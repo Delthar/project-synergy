@@ -1,0 +1,27 @@
+﻿@page "/Server/{URLServerID:int}"
+@inject ServerService ServerService
+
+<div class="col-2 vh-100 border">
+
+</div>
+<div class="col border">
+    
+</div>
+<div class="col-3 border">
+    
+</div>
+
+@code
+{
+    [Parameter]
+    public Int32 URLServerID { get; set; }
+
+    public Server? CurrentServer { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        CurrentServer = await ServerService.GetServerByServerID(URLServerID);
+        
+        await base.OnInitializedAsync();
+    }
+}
