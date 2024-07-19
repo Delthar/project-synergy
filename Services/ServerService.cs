@@ -1,4 +1,4 @@
-﻿using Synergy.Models;
+﻿using Synergy.Entities;
 
 namespace Synergy.Services
 {

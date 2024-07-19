@@ -1,11 +1,12 @@
-﻿namespace Synergy.Models
+﻿
+namespace Synergy.Entities
 {
     public class Server
     {
-        public Int32 ServerID { get; set; }
-        public String? Name { get; set; }
-        public String Image { get; set; }
-        
+        public int ServerID { get; set; }
+        public string? Name { get; set; }
+        public string Image { get; set; }
+
         public List<User>? Users { get; set; }
         public List<Role>? Roles { get; set; }
 
@@ -15,7 +16,7 @@
             Image = "~/testimage.jpg";
         }
 
-        public Server(Int32 ServerID, String Image)
+        public Server(int ServerID, string Image)
         {
             this.ServerID = ServerID;
             this.Image = Image;

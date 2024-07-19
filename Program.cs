@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using Synergy;
 using Synergy.Components;
 using Synergy.Services;
 
@@ -6,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents().AddInteractiveServerComponents();
 builder.Services.AddSingleton<ServerService>();
+
+builder.Services.AddDbContext<SynergyDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("SynergyDatabase")));
 
 var app = builder.Build();
 
